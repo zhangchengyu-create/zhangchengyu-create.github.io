@@ -1,0 +1,31 @@
+:root{font-family:Arial,"PingFang SC","Noto Sans KR",sans-serif;color:#151515;background:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:#fff}
+a{color:inherit}
+.project-shell{min-height:100vh;padding:0 3vw 90px}
+.project-bar{height:70px;border-bottom:1px solid #aaa9a4;display:flex;align-items:center;justify-content:space-between;position:relative}
+.project-mark{font:23px Georgia,serif;letter-spacing:-.14em}
+.project-menu{position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:10}
+.project-menu>summary{list-style:none;width:44px;height:44px;cursor:pointer;background:linear-gradient(currentColor,currentColor) center 13px/24px 1px no-repeat,linear-gradient(currentColor,currentColor) center 21px/24px 1px no-repeat,linear-gradient(currentColor,currentColor) center 29px/24px 1px no-repeat}
+.project-menu>summary::-webkit-details-marker{display:none}
+.project-menu-panel{position:absolute;right:0;top:52px;display:flex;flex-direction:column;min-width:180px;padding:10px;background:#fff;border:1px solid #aaa9a4}
+.project-menu-panel a{padding:12px 14px;text-decoration:none;white-space:nowrap}
+.project-menu-panel a:hover{background:#eee}
+.project-shell input{position:absolute;opacity:0;pointer-events:none}
+.project-lang{display:none}
+.project-shell #pzh:checked~.zh,.project-shell #pen:checked~.en,.project-shell #pko:checked~.ko{display:block}
+.project-main{max-width:1340px;margin:0 auto}
+.project-kicker{font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin:12vh 0 22px;color:#686862}
+.project-title{font:400 clamp(48px,9vw,132px)/.86 Georgia,"Songti SC","Noto Serif KR",serif;letter-spacing:-.075em;margin:0 0 55px}
+.project-intro{display:grid;grid-template-columns:1fr 1fr;gap:4vw;border-top:1px solid #aaa9a4;border-bottom:1px solid #aaa9a4;padding:25px 0 32px;margin-bottom:70px}
+.project-intro h2{font:400 clamp(28px,3.6vw,54px)/1 Georgia,"Songti SC",serif;margin:0;letter-spacing:-.05em}
+.project-intro p{font-size:16px;line-height:1.65;max-width:520px;margin:0}
+.project-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.project-gallery figure{margin:0}
+.project-gallery figure.wide{grid-column:1/-1}
+.project-gallery img{display:block;width:100%;height:auto;background:#f7f7f5}
+.project-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #aaa9a4;margin-top:78px;padding-top:18px;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.project-langs{display:flex;gap:14px}
+.project-langs label{cursor:pointer;color:#686862;text-decoration:none}
+.project-shell:has(#pzh:checked) .project-langs label[for=pzh],.project-shell:has(#pen:checked) .project-langs label[for=pen],.project-shell:has(#pko:checked) .project-langs label[for=pko]{color:#151515;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:700px){.project-shell{padding:0 20px 60px}.project-bar{height:62px}.project-kicker{margin-top:10vh}.project-title{font-size:15vw;margin-bottom:42px}.project-intro{display:block;padding:20px 0 26px;margin-bottom:45px}.project-intro h2{margin-bottom:22px}.project-gallery{grid-template-columns:1fr;gap:28px}.project-gallery figure.wide{grid-column:auto}.project-foot{margin-top:50px;gap:20px;align-items:flex-start}.project-langs{gap:10px}}
